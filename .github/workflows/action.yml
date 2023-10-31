@@ -27,7 +27,7 @@ jobs:
           pytest tests/
       
       - name: Build Docker Image
-        uses: FlowSquad/docker-cloud-build@v1.0.1
+        uses: Miragon/docker-cloud-build@v1.0.1
         with:
           gcp-project-id: bipolarfactoryfastapi
           gcp-service-account-key: ${{ secrets.GCP_SA_KEY }}
