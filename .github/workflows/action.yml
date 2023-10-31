@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: 3.8  # Use Python 3.8 or the version specified in your project
+          python-version: 3.8  
         
       - name: Install dependencies
         run: |
@@ -25,3 +25,12 @@ jobs:
       - name: Run tests
         run: |
           pytest tests/
+      
+      - name: Build Docker Image
+        uses: FlowSquad/docker-cloud-build@v1.0.1
+        with:
+          gcp-project-id: bipolarfactoryfastapi
+          gcp-service-account-key: ${{ secrets.GCP_SA_KEY }}
+          image-name: hello-world
+          image-sources: Dockerfile
+          github-token: ${{ secrets.GIT }}

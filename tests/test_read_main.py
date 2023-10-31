@@ -16,7 +16,6 @@ def test_read_root_content():
     assert response.json()["Hello"] == "World"
 
 
-
 def test_read_nonexistent_endpoint():
     response = client.get("/nonexistent")
     assert response.status_code == 404
