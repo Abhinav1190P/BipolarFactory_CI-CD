@@ -33,4 +33,5 @@ jobs:
           gcp-service-account-key: ${{ secrets.GCP_SA_KEY }}
           image-name: hello-world
           image-sources: Dockerfile
+          github-disabled: true
           github-token: ${{ secrets.GIT }}
