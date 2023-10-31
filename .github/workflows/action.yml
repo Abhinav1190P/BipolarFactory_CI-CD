@@ -34,4 +34,4 @@ jobs:
           image-name: hello-world
           image-sources: build/libs/*.jar,Dockerfile,some-other-file
           github-disabled: true
-          github-token: ${{ secrets.GIT }}
+          github-token: ${{ secrets.GIT_TOKEN }}
