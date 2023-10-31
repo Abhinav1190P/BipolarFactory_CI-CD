@@ -32,6 +32,6 @@ jobs:
           gcp-project-id: bipolarfactoryfastapi
           gcp-service-account-key: ${{ secrets.GCP_SA_KEY }}
           image-name: hello-world
-          image-sources: Dockerfile
+          image-sources: build/libs/*.jar,Dockerfile,some-other-file
           github-disabled: true
           github-token: ${{ secrets.GIT }}
